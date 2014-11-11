@@ -42,7 +42,7 @@ class PostsControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testRecuper() {
-		$result = $this->testAction('/posts/add');
+		$result = $this->testAction('/posts/recuperer');
         debug($result);
 	}
 

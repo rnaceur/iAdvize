@@ -22,7 +22,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Recuperer les posts'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Recuperer les posts'), array('action' => 'recuperer')); ?></li>
 		<li><?php echo $this->Html->link(__('Supprimer les posts'), array('action' => 'supprimer')); ?></li>
 	</ul>
 </div>

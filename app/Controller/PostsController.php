@@ -37,6 +37,7 @@ class PostsController extends AppController {
 		
 		$this->set(array('posts' => $posts,'_serialize' => array('posts')));
 	}
+	
 
 /**
  * view method
@@ -55,11 +56,11 @@ class PostsController extends AppController {
 	}
 
 /**
- * add method
+ * recup method
  *
  * @return void
  */
-	public function add() {
+	public function recuperer() {
 		$this->loadModel("Post");
 		$this->Post->insert();
         $this->Session->setFlash(__('Les posts ont été ajoutés'));
@@ -118,5 +119,9 @@ class PostsController extends AppController {
 		$this->Session->setFlash(__('Les posts ont été supprimés'));
 		$this->autoRender = false;
 		$this->redirect(array('action' => 'index'));
+	}
+	
+	public function add() {
+	
 	}
 }
