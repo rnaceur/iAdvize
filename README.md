@@ -1,4 +1,4 @@
-# CakePHP
+# Test Développeur iAdvize avec CakePHP
 
 [![Latest Stable Version](https://poser.pugx.org/cakephp/cakephp/v/stable.svg)](https://packagist.org/packages/cakephp/cakephp)
 [![License](https://poser.pugx.org/cakephp/cakephp/license.svg)](https://packagist.org/packages/cakephp/cakephp)
@@ -7,44 +7,28 @@
 
 [![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+
+## Installation
+
+1. Le développement a été réalisé avec [#WAMP] (http://www.wampserver.com/=#WAMP) pour la gestion du serveur et de la base de données
+2. Penser à bien activer URL rewriting (Sous WAMP  : Apache > Apache module > rewrite_module)
+3. Vérifier que la page de configuration CakePHP n'affiche aucun message d'erreur : http://localhost/Cake/index.php
+4. Importer le script de création de table "posts" dans une base de données appelée "iadvize" 
+(vous pouvez reconfigurer toutes les informations MySQL dans app/Config/database.php)
+
+## Utilisation
+1. Vous pouvez lancer la récupération, l'affichage ou encore la suppression par ligne de commande via CURL
+curl -i -X GET http://localhost/Cake/posts/recuperer //Recupere les 200 derniers enregistrements
+curl -i -X GET http://localhost/Cake/posts/supprimer //Supprime tous les enregistrements en base
+curl -i -X GET http://localhost/Cake/posts //Affiche le contenu de la page HTML dans l'invite
+curl -i -X GET http://localhost/Cake/posts.json //Affiche les enregistrements en base mais au format JSON
+curl -i -X GET http://localhost/Cake/posts/2 //Affiche le code HTML de la page pour l'enregistrement id=2
+curl -i -X GET http://localhost/Cake/posts/2.json // Affiche au format JSON l'enregistrement id=2
 
 
-## Some Handy Links
+2. Bien entendu, toutes ces fonctionnalités sont disponibles avec une l'interface graphique de Cake plus élaborée 
+(Testé sous navigateur Firefox et Chrome : http://localhost/Cake/posts
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
-
-[CookBook](http://book.cakephp.org) - THE CakePHP user documentation; start learning here!
-
-[API](http://api.cakephp.org) - A reference to CakePHP's classes
-
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
-
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
-
-[Community Center](http://community.cakephp.org) - A source for everything community related
-
-[Training](http://training.cakephp.org) - Join a live session and get skilled with the framework
-
-[CakeFest](http://cakefest.org) - Don't miss our annual CakePHP conference
-
-[Cake Software Foundation](http://cakefoundation.org) - Promoting development related to CakePHP
-
-
-## Get Support!
-
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
-
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
-
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
-
-
-## Contributing
-
-[CONTRIBUTING.md](CONTRIBUTING.md) - Quick pointers for contributing to the CakePHP project
-
-[CookBook "Contributing" Section (2.x)](http://book.cakephp.org/2.0/en/contributing.html) [(3.0)](http://book.cakephp.org/3.0/en/contributing.html) - Version-specific details about contributing to the project
+## Divers
+1. Les dépendances du mini projet ont été gérées avec Composer (cf. Composer.json dans le répertoire app/)
+2. Les tests PHPUnit sont disponibles sous http://localhost/Cake/test.php
