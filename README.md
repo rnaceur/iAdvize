@@ -18,12 +18,7 @@
 
 ## Utilisation
 1. Vous pouvez lancer la récupération, l'affichage ou encore la suppression par ligne de commande via CURL
-curl -i -X GET http://localhost/Cake/posts/recuperer //Recupere les 200 derniers enregistrements
-curl -i -X GET http://localhost/Cake/posts/supprimer //Supprime tous les enregistrements en base
-curl -i -X GET http://localhost/Cake/posts //Affiche le contenu de la page HTML dans l'invite
-curl -i -X GET http://localhost/Cake/posts.json //Affiche les enregistrements en base mais au format JSON
-curl -i -X GET http://localhost/Cake/posts/2 //Affiche le code HTML de la page pour l'enregistrement id=2
-curl -i -X GET http://localhost/Cake/posts/2.json // Affiche au format JSON l'enregistrement id=2
+[![Curl](curl.png)]
 
 
 2. Bien entendu, toutes ces fonctionnalités sont disponibles avec une l'interface graphique de Cake plus élaborée 
