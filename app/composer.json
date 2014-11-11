@@ -1,0 +1,13 @@
+{
+	"config": {
+		"vendor-dir": "Vendor"
+	},
+	"require": {
+		"php": ">=5.2.8",
+		"ext-mcrypt": "*",
+		"cakephp/debug_kit": "2.2.*",
+		"phpunit/phpunit": "3.7.32",
+		"shark/simple_html_dom": "dev-master",
+		"behat/behat": "2.4.*@stable"
+	}
+}
